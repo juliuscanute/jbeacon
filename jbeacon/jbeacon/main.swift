@@ -44,16 +44,16 @@ let payload: LowEnergyAdvertisingData.ByteValue = (UInt8(0x02), UInt8(0x01), UIn
 
 let interval = AdvertisingInterval(rawValue: 100)!
 
-do { try controller.enableLowEnergyAdvertising(false, timeout: HCICommandTimeout.default) } catch HCIError.commandDisallowed { /* ignore, means already turned off */
-    print("turned off")
+do { try controller.enableLowEnergyAdvertising(false, timeout: HCICommandTimeout.default) } catch HCIError.commandDisallowed {
+    print("turned off before")
 }
 
 let advertisingParameters = HCILESetAdvertisingParameters(interval: (min: interval, max: interval))
 
 try controller.deviceRequest(advertisingParameters, timeout: HCICommandTimeout.default)
 
-do { try controller.enableLowEnergyAdvertising(timeout: HCICommandTimeout.default) } catch HCIError.commandDisallowed { /* ignore, means already turned off */
-    print("turned on")
+do { try controller.enableLowEnergyAdvertising(timeout: HCICommandTimeout.default) } catch HCIError.commandDisallowed {
+    print("turned on before")
 }
 
 let advertisingDataCommand = HCILESetAdvertisingData(advertisingData: LowEnergyAdvertisingData(length: 31, bytes: payload))
