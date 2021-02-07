@@ -9,7 +9,7 @@ import Foundation
 import Bluetooth
 import BluetoothDarwin
 
-let currentVersionDescription: String = "jbeaon 0.2.0"
+let currentVersionDescription: String = "jbeacon 0.2.0"
 let defaults = UserDefaults.standard
 
 let uuid: UUID
