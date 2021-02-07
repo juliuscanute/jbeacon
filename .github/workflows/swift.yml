@@ -24,3 +24,7 @@ jobs:
       with:
         name: jbeacon
         path: ./jbeacon/build/Release/jbeacon
+    - name: Upload Release Assets
+      uses: alexellis/upload-assets@0.2.3
+      with:
+       asset_paths: ./jbeacon/build/Release/jbeacon
