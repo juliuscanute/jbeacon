@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		870684F825CFD212003E9965 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870684F725CFD212003E9965 /* main.swift */; };
+		8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850025CFE9E7003E9965 /* Bluetooth */; };
+		8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850425CFEA1C003E9965 /* BluetoothDarwin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */,
+				8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = jbeacon;
+			packageProductDependencies = (
+				8706850025CFE9E7003E9965 /* Bluetooth */,
+				8706850425CFEA1C003E9965 /* BluetoothDarwin */,
+			);
 			productName = jbeacon;
 			productReference = 870684F425CFD212003E9965 /* jbeacon */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +113,10 @@
 				Base,
 			);
 			mainGroup = 870684EB25CFD212003E9965;
+			packageReferences = (
+				870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */,
+				8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */,
+			);
 			productRefGroup = 870684F525CFD212003E9965 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +297,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureSwift/Bluetooth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureSwift/BluetoothDarwin.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8706850025CFE9E7003E9965 /* Bluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */;
+			productName = Bluetooth;
+		};
+		8706850425CFEA1C003E9965 /* BluetoothDarwin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
+			productName = BluetoothDarwin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 870684EC25CFD212003E9965 /* Project object */;
 }
