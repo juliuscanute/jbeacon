@@ -23,15 +23,16 @@ jobs:
         project: jbeacon/jbeacon.xcodeproj
         scheme: jbeacon
         configuration: Release
+    - name: Package Zip
+      run: |
+          export BUILD_DIR=$(xcodebuild -project jbeacon/jbeacon.xcodeproj -scheme jbeacon -configuration Release -showBuildSettings  | grep -m 1 "BUILT_PRODUCTS_DIR" | grep -oEi "\/.*")
+          (cd "$BUILD_DIR" ; zip -r jbeacon.zip ./jbeacon)
+          cp "$BUILD_DIR/jbeacon.zip" .
     - uses: actions/upload-artifact@v2
       name: Upload artifacts
       with:
         name: jbeacon
-        path: ./jbeacon/build/Release/jbeacon 
-    - name: Package Zip
-      run: (cd ./jbeacon/build/Release/ ; zip -r jbeacon.zip ./jbeacon)
-    - name: Copy Zip
-      run: cp ./jbeacon/build/Release/jbeacon.zip .
+        path: ./jbeacon.zip
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
