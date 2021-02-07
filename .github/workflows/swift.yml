@@ -20,7 +20,7 @@ jobs:
       with:
         project: jbeacon/jbeacon.xcodeproj
     - uses: actions/upload-artifact@v2
-    - name: Upload artifact
+      name: Upload artifacts
       with:
         name: jbeacon
         path: ./jbeacon/build/Release/jbeacon
