@@ -21,6 +21,8 @@ jobs:
       uses: devbotsxyz/xcode-build@v1.0.0
       with:
         project: jbeacon/jbeacon.xcodeproj
+        scheme: jbeacon
+        configuration: Release
     - uses: actions/upload-artifact@v2
       name: Upload artifacts
       with:
