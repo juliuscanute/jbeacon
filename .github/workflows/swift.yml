@@ -23,15 +23,10 @@ jobs:
       name: Upload artifacts
       with:
         name: jbeacon
-        path: ./jbeacon/build/Release/jbeacon
-    - name: Zip Release
-      uses: TheDoctor0/zip-release@0.4.1
-      with:
-        filename: jbeacon.zip
-        path: ./jbeacon/build/Release/ 
+        path: ./jbeacon/build/Release/jbeacon 
     - name: Upload Release Assets
       uses: alexellis/upload-assets@0.2.3
       env:
         GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
       with:
-       asset_paths: ./jbeacon.zip
+       asset_paths: ./jbeacon/build/Release/jbeacon 
