@@ -1,4 +1,4 @@
-![Swift](https://github.com/juliuscanute/jbeacon/workflows/Swift/badge.svg)
+![Swift](https://github.com/juliuscanute/jbeacon/workflows/Swift/badge.svg?branch=master&event=status)
 # jbeacon
 iBeacon Editor CLI
 

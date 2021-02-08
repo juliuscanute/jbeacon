@@ -10,6 +10,8 @@
 		870684F825CFD212003E9965 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870684F725CFD212003E9965 /* main.swift */; };
 		8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850025CFE9E7003E9965 /* Bluetooth */; };
 		8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850425CFEA1C003E9965 /* BluetoothDarwin */; };
+		87A32DEE25D138AA0019F1F3 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DED25D138AA0019F1F3 /* CLIKit */; };
+		87A32DF225D146C40019F1F3 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DF125D146C40019F1F3 /* ColorizeSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +37,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */,
+				87A32DF225D146C40019F1F3 /* ColorizeSwift in Frameworks */,
 				8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */,
+				87A32DEE25D138AA0019F1F3 /* CLIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,8 @@
 			packageProductDependencies = (
 				8706850025CFE9E7003E9965 /* Bluetooth */,
 				8706850425CFEA1C003E9965 /* BluetoothDarwin */,
+				87A32DED25D138AA0019F1F3 /* CLIKit */,
+				87A32DF125D146C40019F1F3 /* ColorizeSwift */,
 			);
 			productName = jbeacon;
 			productReference = 870684F425CFD212003E9965 /* jbeacon */;
@@ -116,6 +122,8 @@
 			packageReferences = (
 				870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */,
 				8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */,
+				87A32DEC25D138AA0019F1F3 /* XCRemoteSwiftPackageReference "CLIKit" */,
+				87A32DF025D146C40019F1F3 /* XCRemoteSwiftPackageReference "ColorizeSwift" */,
 			);
 			productRefGroup = 870684F525CFD212003E9965 /* Products */;
 			projectDirPath = "";
@@ -315,6 +323,22 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		87A32DEC25D138AA0019F1F3 /* XCRemoteSwiftPackageReference "CLIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apparata/CLIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.6;
+			};
+		};
+		87A32DF025D146C40019F1F3 /* XCRemoteSwiftPackageReference "ColorizeSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mtynior/ColorizeSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -327,6 +351,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
 			productName = BluetoothDarwin;
+		};
+		87A32DED25D138AA0019F1F3 /* CLIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DEC25D138AA0019F1F3 /* XCRemoteSwiftPackageReference "CLIKit" */;
+			productName = CLIKit;
+		};
+		87A32DF125D146C40019F1F3 /* ColorizeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DF025D146C40019F1F3 /* XCRemoteSwiftPackageReference "ColorizeSwift" */;
+			productName = ColorizeSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
