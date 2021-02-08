@@ -18,6 +18,24 @@
           "revision": "f460686125e257710a6c8077bc91e7289f4b7a77",
           "version": "1.1.0"
         }
+      },
+      {
+        "package": "CLIKit",
+        "repositoryURL": "https://github.com/apparata/CLIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d9e9736ab94e8df4a4240b292ad5227f14c0503d",
+          "version": "0.3.6"
+        }
+      },
+      {
+        "package": "ColorizeSwift",
+        "repositoryURL": "https://github.com/mtynior/ColorizeSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "2a354639173d021f4648cf1912b2b00a3a7cd83c",
+          "version": "1.6.0"
+        }
       }
     ]
   },
