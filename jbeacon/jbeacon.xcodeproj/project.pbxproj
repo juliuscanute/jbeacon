@@ -12,6 +12,7 @@
 		8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850425CFEA1C003E9965 /* BluetoothDarwin */; };
 		87A32DEE25D138AA0019F1F3 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DED25D138AA0019F1F3 /* CLIKit */; };
 		87A32DF225D146C40019F1F3 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DF125D146C40019F1F3 /* ColorizeSwift */; };
+		87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BeaconCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		870684F425CFD212003E9965 /* jbeacon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jbeacon; sourceTree = BUILT_PRODUCTS_DIR; };
 		870684F725CFD212003E9965 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		87B249C125D1E29100746DA2 /* BeaconCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				870684F725CFD212003E9965 /* main.swift */,
+				87B249C125D1E29100746DA2 /* BeaconCommand.swift */,
 			);
 			path = jbeacon;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				870684F825CFD212003E9965 /* main.swift in Sources */,
+				87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
