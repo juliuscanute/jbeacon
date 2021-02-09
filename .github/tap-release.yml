@@ -1,7 +1,7 @@
 asset: jbeacon.zip
-tap: juliuscanute/homebrew-formulae/ibeacon.rb
+tap: juliuscanute/homebrew-formulae/jbeacon.rb
 template: >
-  class Ibeacon < Formula
+  class Jbeacon < Formula
     desc     "$REPO_DESCRIPTION"
     homepage "$REPO_WEBITE"
     version  "$STABLE_VERSION"
