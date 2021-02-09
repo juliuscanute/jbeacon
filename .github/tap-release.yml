@@ -1,7 +1,7 @@
 url: https://github.com/juliuscanute/jbeacon/releases/download/$STABLE_VERSION/jbeacon.zip
-tap: juliuscanute/homebrew-formulae/jbeacon.rb
+tap: juliuscanute/homebrew-formulae/ibeacon.rb
 template: >
-  class Jbeacon < Formula
+  class Ibeacon < Formula
     desc     "$REPO_DESCRIPTION"
     homepage "$REPO_WEBITE"
     version  "$STABLE_VERSION"
