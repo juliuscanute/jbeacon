@@ -1,0 +1,19 @@
+on:
+  push:
+    tags: 'v*'
+
+jobs:
+  homebrew:
+    name: Bump Homebrew formula
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mislav/bump-homebrew-formula-action@v1
+        if: "!contains(github.ref, '-')" # skip prereleases
+        with:
+          formula-name: jbeacon
+          homebrew-tap: juliuscanute/homebrew-formulae
+          base-branch: master
+          download-url: https://github.com/juliuscanute/jbeacon/releases/download/{{version}}/jbeacon.zip
+          commit-message: {{formulaName}} {{version}}
+        env:
+          COMMITTER_TOKEN: ${{ secrets.CI_TOKEN }}
