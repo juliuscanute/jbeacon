@@ -1,4 +1,4 @@
-asset: jbeacon.zip
+url: https://github.com/juliuscanute/jbeacon/releases/download/$STABLE_VERSION/jbeacon.zip
 tap: juliuscanute/homebrew-formulae/jbeacon.rb
 template: >
   class Jbeacon < Formula
