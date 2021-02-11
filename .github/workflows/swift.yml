@@ -41,3 +41,13 @@ jobs:
             jbeacon.zip
       env:
         GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
+    - uses: mislav/bump-homebrew-formula-action@v1
+      if: "!contains(github.ref, '-')" # skip prereleases
+      with:
+        formula-name: jbeacon
+        homebrew-tap: juliuscanute/homebrew-formulae
+        base-branch: master
+        download-url: https://github.com/juliuscanute/jbeacon/releases/download/{{version}}/jbeacon.zip
+        commit-message: commit jbeacon configuration
+      env:
+        COMMITTER_TOKEN: ${{ secrets.CI_TOKEN }}
