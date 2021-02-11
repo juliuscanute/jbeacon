@@ -14,6 +14,6 @@ jobs:
           homebrew-tap: juliuscanute/homebrew-formulae
           base-branch: master
           download-url: https://github.com/juliuscanute/jbeacon/releases/download/{{version}}/jbeacon.zip
-          commit-message: {{formulaName}} {{version}}
+          commit-message: commit jbeacon configuration
         env:
           COMMITTER_TOKEN: ${{ secrets.CI_TOKEN }}
