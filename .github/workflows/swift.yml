@@ -42,7 +42,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
     - uses: mislav/bump-homebrew-formula-action@v1
-      if: "!contains(github.ref, '-')" # skip prereleases
+      if: startsWith(github.ref, 'refs/tags/')
       with:
         formula-name: jbeacon
         homebrew-tap: juliuscanute/homebrew-formulae
