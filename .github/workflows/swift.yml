@@ -47,7 +47,7 @@ jobs:
         formula-name: jbeacon
         homebrew-tap: juliuscanute/homebrew-formulae
         base-branch: master
-        download-url: https://github.com/juliuscanute/jbeacon/releases/download/{{version}}/jbeacon.zip
-        commit-message: commit jbeacon configuration
+        download-url: ${{format('{0}{1}{2}', 'https://github.com/juliuscanute/jbeacon/releases/download/', steps.get_version.outputs.VERSION , '/jbeacon.zip')}}
+        commit-message: 'Bump up {{formulaName}} formula to v{{version}} version'
       env:
         COMMITTER_TOKEN: ${{ secrets.CI_TOKEN }}
