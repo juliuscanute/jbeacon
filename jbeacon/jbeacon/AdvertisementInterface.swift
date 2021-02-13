@@ -9,7 +9,7 @@ import Foundation
 import Bluetooth
 import BluetoothDarwin
 
-protocol HostInterface {
+protocol AdvertisementInterface {
     func setAdvertisingParameters() throws
     func setAdvertisingData(payload: LowEnergyAdvertisingData.ByteValue) throws
     func turnOffAdvertising() throws

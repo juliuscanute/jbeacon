@@ -10,7 +10,7 @@ import Bluetooth
 import BluetoothDarwin
 
 
-class BluetoothImplementation: HostInterface {
+class HostAdvertisementImplementation: AdvertisementInterface {
     let controller = HostController.default!
     func setAdvertisingParameters() throws {
         try controller.setAdvertisingParameters()

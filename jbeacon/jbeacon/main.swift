@@ -8,7 +8,7 @@ import CLIKit
 import Bluetooth
 import BluetoothDarwin
 
-let beacon = BroadcastArguments(controller: BluetoothImplementation())
+let beacon = BeaconCommand(controller: HostAdvertisementImplementation())
 do {
     let command = try CommandLineParser().parse(command: beacon)
     try command.run()
@@ -16,12 +16,11 @@ do {
         beacon.stop()
         return true
     })
-} catch CommandLineError.invalidArgumentValueFormat(let captured) {
-    print("Invalid arguments supplied: \(captured)".red())
-    beacon.printUsage()
-} catch CommandLineError.usageRequested( _) {
-    beacon.printUsage()
-} catch {
-    print("Unable to complete broadcast request:".red())
-    print("Verify bluetooth device is turned on & try again.".red())
+}catch {
+    if(error is CommandLineError){
+        print(error.localizedDescription)
+    }else {
+        print("Unable to complete broadcast request:".red())
+        print("Verify bluetooth device is turned on & try again.".red())
+    }
 }
