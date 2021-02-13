@@ -31,21 +31,21 @@ OPTIONS:
 
 # Usage set UUID
 ```sh
-jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002
+$ jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002
 Using uuid:efb8454c-6988-11eb-9439-0242ac130002 manufacturer:0 major:0 minor:0 tx:128
 Broadcast Started 📶
 ```
 
 # Usage set UUID & manufacturer
 ```sh
-jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002 -manufacturer 1234
+$ jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002 -manufacturer 1234
 Using uuid:efb8454c-6988-11eb-9439-0242ac130002 manufacturer:1234 major:0 minor:0 tx:128
 Broadcast Started 📶
 ```
 
 # Usage set UUID, manufacturer, major, minor & measuredPower(tx)
 ```sh
-jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002 -manufacturer 1234 -major 1 -minor 2 -measuredPower 128
+$ jbeacon -uuid efb8454c-6988-11eb-9439-0242ac130002 -manufacturer 1234 -major 1 -minor 2 -measuredPower 128
 Using uuid:efb8454c-6988-11eb-9439-0242ac130002 manufacturer:1234 major:1 minor:2 tx:128
 Broadcast Started 📶
 ```
