@@ -14,10 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Xcode Test
+      uses: devbotsxyz/xcode-test@v1.1.0
+      with:
+        project: jbeacon/jbeacon.xcodeproj
+        scheme: IBeaconTest
+        configuration: Debug      
     - name: Xcode Build
-      # You may pin to the exact commit or the version.
-      # uses: devbotsxyz/xcode-build@2138f429e7bebe426d65985aca0dbad5370aa697
-      #   cp "$IOS_DIR/MultiConfig-${CONFIGURATION}.zip" .
       uses: devbotsxyz/xcode-build@v1.0.0
       with:
         project: jbeacon/jbeacon.xcodeproj
