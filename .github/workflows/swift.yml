@@ -14,6 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Xcode Build Debug
+      uses: devbotsxyz/xcode-build@v1.0.0
+      with:
+        project: jbeacon/jbeacon.xcodeproj
+        scheme: jbeacon
+        configuration: Debug      
     - name: Xcode Test
       uses: devbotsxyz/xcode-test@v1.1.0
       with:
