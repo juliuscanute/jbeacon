@@ -12,11 +12,7 @@ import CLIKit
 import ColorizeSwift
 
 class BeaconCommand: Command {
-    #if VERSION
-    let description = "Beacon Editor CLI \(VERSION)"
-    #else
-    let description = "Beacon Editor CLI - LOCAL"
-    #endif
+    let description = "Beacon Editor CLI - v1.2.1"
     static let uuidRegex = #"\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b"#
     static let uint16Regex = #"^(-?(\d{1,4}|[012]\d{4}|3[01]\d{3}|32[0123456]\d{2}|327[012345]\d{1}|3276[01234567])|-32768)"#
     static let uint8Regex = #"\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\b"#
