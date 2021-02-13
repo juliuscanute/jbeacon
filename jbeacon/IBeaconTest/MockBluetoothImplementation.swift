@@ -9,7 +9,7 @@ import Foundation
 @testable import Bluetooth
 @testable import CLIKit
 
-class MockBluetoothImplementation : HostInterface {
+class MockBluetoothImplementation : AdvertisementInterface {
     func setAdvertisingParameters() {
         
     }

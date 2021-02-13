@@ -11,7 +11,7 @@ import XCTest
 class IBeaconTest: XCTestCase {
     
     func testValidUUID() throws {
-        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
         let parser = CommandLineParser()
         let arguments: [String] = [
             "jbeacon",
@@ -24,7 +24,7 @@ class IBeaconTest: XCTestCase {
     }
     
     func testInValidUUID() throws {
-        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
         let parser = CommandLineParser()
         let arguments: [String] = [
             "jbeacon",
@@ -36,11 +36,47 @@ class IBeaconTest: XCTestCase {
             let command = parsedCommand
             try command.run()
         }
-        XCTAssertThrowsError(try testInValidUUIDThrow())
+        XCTAssertThrowsError(try testInValidUUIDThrow()) { error in
+            XCTAssertEqual("Error: Incorrect format for argument 045af837-e309-4e62-8206-41c41ebeac", error.localizedDescription)
+        }
+    }
+    
+    func testHelp() throws {
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-h",
+        ]
+        func testHelpDescription() throws {
+            let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+            let command = parsedCommand
+            try command.run()
+        }
+        XCTAssertThrowsError(try testHelpDescription()) { error in
+            XCTAssertTrue(error is CommandLineError, "Must be command line error")
+        }
+    }
+    
+    func testInvalidArguments() throws {
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-xdsfdf",
+        ]
+        func testInvalidArgumentsThrow() throws {
+            let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+            let command = parsedCommand
+            try command.run()
+        }
+        XCTAssertThrowsError(try testInvalidArgumentsThrow()) { error in
+            XCTAssertEqual("Error: Invalid flag or option \"-xdsfdf\"", error.localizedDescription)
+        }
     }
     
     func testValidManufacturer() throws {
-        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
         let parser = CommandLineParser()
         let arguments: [String] = [
             "jbeacon",
@@ -54,7 +90,7 @@ class IBeaconTest: XCTestCase {
     
     func testInvalid16ByteData() throws {
         func testInValidDataThrow(data: Int) throws {
-            let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+            let beacon = BeaconCommand(controller: MockBluetoothImplementation())
             let parser = CommandLineParser()
             let arguments: [String] = [
                 "jbeacon",
@@ -70,13 +106,17 @@ class IBeaconTest: XCTestCase {
             try command.run()
         }
         
-        XCTAssertThrowsError(try testInValidDataThrow(data: -1))
-        XCTAssertThrowsError(try testInValidDataThrow(data: 65536))
+        XCTAssertThrowsError(try testInValidDataThrow(data: -1)) { error in
+            XCTAssertEqual("Error: Missing value for option \"manufacturer\"", error.localizedDescription)
+        }
+        XCTAssertThrowsError(try testInValidDataThrow(data: 65536)) { error in
+            XCTAssertEqual("Error: Incorrect format for argument 65536", error.localizedDescription)
+        }
     }
     
     
     func testValidMajorAndMinor() throws {
-        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
         let parser = CommandLineParser()
         let arguments: [String] = [
             "jbeacon",
@@ -91,7 +131,7 @@ class IBeaconTest: XCTestCase {
     }
     
     func testMeasuredPower() throws {
-        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let beacon = BeaconCommand(controller: MockBluetoothImplementation())
         let parser = CommandLineParser()
         let arguments: [String] = [
             "jbeacon",
@@ -105,7 +145,7 @@ class IBeaconTest: XCTestCase {
     
     func testInvalidMeasuredPower() throws {
         func testInValidDataThrow(data: Int) throws {
-            let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+            let beacon = BeaconCommand(controller: MockBluetoothImplementation())
             let parser = CommandLineParser()
             let arguments: [String] = [
                 "jbeacon",
@@ -117,8 +157,12 @@ class IBeaconTest: XCTestCase {
             try command.run()
         }
         
-        XCTAssertThrowsError(try testInValidDataThrow(data: -1))
-        XCTAssertThrowsError(try testInValidDataThrow(data: 256))
+        XCTAssertThrowsError(try testInValidDataThrow(data: -1)) { error in
+            XCTAssertEqual("Error: Missing value for option \"measuredPower\"", error.localizedDescription)
+        }
+        XCTAssertThrowsError(try testInValidDataThrow(data: 256)) { error in
+            XCTAssertEqual("Error: Incorrect format for argument 256", error.localizedDescription)
+        }
     }
     
 }
