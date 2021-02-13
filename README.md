@@ -1,4 +1,4 @@
-![Swift](https://github.com/juliuscanute/jbeacon/workflows/Swift/badge.svg?branch=v1.1.1)
+![Swift](https://github.com/juliuscanute/jbeacon/workflows/Swift/badge.svg)
 # jbeacon
 iBeacon Editor CLI
 

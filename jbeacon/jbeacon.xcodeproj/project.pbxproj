@@ -10,9 +10,21 @@
 		870684F825CFD212003E9965 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870684F725CFD212003E9965 /* main.swift */; };
 		8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850025CFE9E7003E9965 /* Bluetooth */; };
 		8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850425CFEA1C003E9965 /* BluetoothDarwin */; };
+		87266E1A25D5E03100314966 /* IBeaconTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E1925D5E03100314966 /* IBeaconTest.swift */; };
+		87266E2825D75D6D00314966 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E2725D75D6D00314966 /* BeaconCommand.swift */; };
+		87266E2F25D76D5000314966 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E2E25D76D5000314966 /* Bluetooth */; };
+		87266E3125D76D5000314966 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3025D76D5000314966 /* BluetoothDarwin */; };
+		87266E3325D76D5000314966 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3225D76D5000314966 /* CLIKit */; };
+		87266E3525D76D5000314966 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3425D76D5000314966 /* ColorizeSwift */; };
+		87266E3925D76EAA00314966 /* MockBluetoothImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */; };
+		87266E3D25D7773F00314966 /* HostInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3C25D7773F00314966 /* HostInterface.swift */; };
+		87266E4125D777CD00314966 /* BluetoothImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E4025D777CD00314966 /* BluetoothImplementation.swift */; };
+		87266E4625D77B2300314966 /* BroadcastArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BroadcastArguments.swift */; };
+		87266E4725D77B2300314966 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E2725D75D6D00314966 /* BeaconCommand.swift */; };
+		87266E4825D77B2300314966 /* HostInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3C25D7773F00314966 /* HostInterface.swift */; };
 		87A32DEE25D138AA0019F1F3 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DED25D138AA0019F1F3 /* CLIKit */; };
 		87A32DF225D146C40019F1F3 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DF125D146C40019F1F3 /* ColorizeSwift */; };
-		87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BeaconCommand.swift */; };
+		87B249C225D1E29100746DA2 /* BroadcastArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BroadcastArguments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +42,14 @@
 /* Begin PBXFileReference section */
 		870684F425CFD212003E9965 /* jbeacon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jbeacon; sourceTree = BUILT_PRODUCTS_DIR; };
 		870684F725CFD212003E9965 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		87B249C125D1E29100746DA2 /* BeaconCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCommand.swift; sourceTree = "<group>"; };
+		87266E1725D5E03100314966 /* IBeaconTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBeaconTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87266E1925D5E03100314966 /* IBeaconTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconTest.swift; sourceTree = "<group>"; };
+		87266E1B25D5E03100314966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87266E2725D75D6D00314966 /* BeaconCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCommand.swift; sourceTree = "<group>"; };
+		87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBluetoothImplementation.swift; sourceTree = "<group>"; };
+		87266E3C25D7773F00314966 /* HostInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInterface.swift; sourceTree = "<group>"; };
+		87266E4025D777CD00314966 /* BluetoothImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothImplementation.swift; sourceTree = "<group>"; };
+		87B249C125D1E29100746DA2 /* BroadcastArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastArguments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +64,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87266E1425D5E03100314966 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87266E3125D76D5000314966 /* BluetoothDarwin in Frameworks */,
+				87266E3525D76D5000314966 /* ColorizeSwift in Frameworks */,
+				87266E2F25D76D5000314966 /* Bluetooth in Frameworks */,
+				87266E3325D76D5000314966 /* CLIKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -52,7 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				870684F625CFD212003E9965 /* jbeacon */,
+				87266E1825D5E03100314966 /* IBeaconTest */,
 				870684F525CFD212003E9965 /* Products */,
+				87266E2D25D76D5000314966 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				870684F425CFD212003E9965 /* jbeacon */,
+				87266E1725D5E03100314966 /* IBeaconTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +101,29 @@
 			isa = PBXGroup;
 			children = (
 				870684F725CFD212003E9965 /* main.swift */,
-				87B249C125D1E29100746DA2 /* BeaconCommand.swift */,
+				87B249C125D1E29100746DA2 /* BroadcastArguments.swift */,
+				87266E2725D75D6D00314966 /* BeaconCommand.swift */,
+				87266E3C25D7773F00314966 /* HostInterface.swift */,
+				87266E4025D777CD00314966 /* BluetoothImplementation.swift */,
 			);
 			path = jbeacon;
+			sourceTree = "<group>";
+		};
+		87266E1825D5E03100314966 /* IBeaconTest */ = {
+			isa = PBXGroup;
+			children = (
+				87266E1925D5E03100314966 /* IBeaconTest.swift */,
+				87266E1B25D5E03100314966 /* Info.plist */,
+				87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */,
+			);
+			path = IBeaconTest;
+			sourceTree = "<group>";
+		};
+		87266E2D25D76D5000314966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +152,29 @@
 			productReference = 870684F425CFD212003E9965 /* jbeacon */;
 			productType = "com.apple.product-type.tool";
 		};
+		87266E1625D5E03100314966 /* IBeaconTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87266E1E25D5E03100314966 /* Build configuration list for PBXNativeTarget "IBeaconTest" */;
+			buildPhases = (
+				87266E1325D5E03100314966 /* Sources */,
+				87266E1425D5E03100314966 /* Frameworks */,
+				87266E1525D5E03100314966 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBeaconTest;
+			packageProductDependencies = (
+				87266E2E25D76D5000314966 /* Bluetooth */,
+				87266E3025D76D5000314966 /* BluetoothDarwin */,
+				87266E3225D76D5000314966 /* CLIKit */,
+				87266E3425D76D5000314966 /* ColorizeSwift */,
+			);
+			productName = IBeaconTest;
+			productReference = 87266E1725D5E03100314966 /* IBeaconTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +185,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					870684F325CFD212003E9965 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					87266E1625D5E03100314966 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -133,17 +212,43 @@
 			projectRoot = "";
 			targets = (
 				870684F325CFD212003E9965 /* jbeacon */,
+				87266E1625D5E03100314966 /* IBeaconTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87266E1525D5E03100314966 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		870684F025CFD212003E9965 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87266E4125D777CD00314966 /* BluetoothImplementation.swift in Sources */,
 				870684F825CFD212003E9965 /* main.swift in Sources */,
-				87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */,
+				87266E3D25D7773F00314966 /* HostInterface.swift in Sources */,
+				87B249C225D1E29100746DA2 /* BroadcastArguments.swift in Sources */,
+				87266E2825D75D6D00314966 /* BeaconCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87266E1325D5E03100314966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87266E4625D77B2300314966 /* BroadcastArguments.swift in Sources */,
+				87266E4725D77B2300314966 /* BeaconCommand.swift in Sources */,
+				87266E4825D77B2300314966 /* HostInterface.swift in Sources */,
+				87266E1A25D5E03100314966 /* IBeaconTest.swift in Sources */,
+				87266E3925D76EAA00314966 /* MockBluetoothImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -256,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -268,9 +373,11 @@
 		870684FC25CFD212003E9965 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5L5PDU89L;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -279,9 +386,49 @@
 		870684FD25CFD212003E9965 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5L5PDU89L;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		87266E1C25D5E03100314966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W5L5PDU89L;
+				INFOPLIST_FILE = IBeaconTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juliuscanute.IBeaconTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		87266E1D25D5E03100314966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W5L5PDU89L;
+				INFOPLIST_FILE = IBeaconTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juliuscanute.IBeaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -304,6 +451,15 @@
 			buildConfigurations = (
 				870684FC25CFD212003E9965 /* Debug */,
 				870684FD25CFD212003E9965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87266E1E25D5E03100314966 /* Build configuration list for PBXNativeTarget "IBeaconTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87266E1C25D5E03100314966 /* Debug */,
+				87266E1D25D5E03100314966 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -355,6 +511,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
 			productName = BluetoothDarwin;
+		};
+		87266E2E25D76D5000314966 /* Bluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */;
+			productName = Bluetooth;
+		};
+		87266E3025D76D5000314966 /* BluetoothDarwin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
+			productName = BluetoothDarwin;
+		};
+		87266E3225D76D5000314966 /* CLIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DEC25D138AA0019F1F3 /* XCRemoteSwiftPackageReference "CLIKit" */;
+			productName = CLIKit;
+		};
+		87266E3425D76D5000314966 /* ColorizeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DF025D146C40019F1F3 /* XCRemoteSwiftPackageReference "ColorizeSwift" */;
+			productName = ColorizeSwift;
 		};
 		87A32DED25D138AA0019F1F3 /* CLIKit */ = {
 			isa = XCSwiftPackageProductDependency;
