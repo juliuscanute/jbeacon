@@ -11,9 +11,20 @@
 		8706850125CFE9E7003E9965 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850025CFE9E7003E9965 /* Bluetooth */; };
 		8706850525CFEA1C003E9965 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 8706850425CFEA1C003E9965 /* BluetoothDarwin */; };
 		87266E1A25D5E03100314966 /* IBeaconTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E1925D5E03100314966 /* IBeaconTest.swift */; };
+		87266E2825D75D6D00314966 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E2725D75D6D00314966 /* BeaconCommand.swift */; };
+		87266E2F25D76D5000314966 /* Bluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E2E25D76D5000314966 /* Bluetooth */; };
+		87266E3125D76D5000314966 /* BluetoothDarwin in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3025D76D5000314966 /* BluetoothDarwin */; };
+		87266E3325D76D5000314966 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3225D76D5000314966 /* CLIKit */; };
+		87266E3525D76D5000314966 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87266E3425D76D5000314966 /* ColorizeSwift */; };
+		87266E3925D76EAA00314966 /* MockBluetoothImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */; };
+		87266E3D25D7773F00314966 /* HostInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3C25D7773F00314966 /* HostInterface.swift */; };
+		87266E4125D777CD00314966 /* BluetoothImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E4025D777CD00314966 /* BluetoothImplementation.swift */; };
+		87266E4625D77B2300314966 /* BroadcastArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BroadcastArguments.swift */; };
+		87266E4725D77B2300314966 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E2725D75D6D00314966 /* BeaconCommand.swift */; };
+		87266E4825D77B2300314966 /* HostInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87266E3C25D7773F00314966 /* HostInterface.swift */; };
 		87A32DEE25D138AA0019F1F3 /* CLIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DED25D138AA0019F1F3 /* CLIKit */; };
 		87A32DF225D146C40019F1F3 /* ColorizeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A32DF125D146C40019F1F3 /* ColorizeSwift */; };
-		87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BeaconCommand.swift */; };
+		87B249C225D1E29100746DA2 /* BroadcastArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B249C125D1E29100746DA2 /* BroadcastArguments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +45,11 @@
 		87266E1725D5E03100314966 /* IBeaconTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBeaconTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87266E1925D5E03100314966 /* IBeaconTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconTest.swift; sourceTree = "<group>"; };
 		87266E1B25D5E03100314966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87B249C125D1E29100746DA2 /* BeaconCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCommand.swift; sourceTree = "<group>"; };
+		87266E2725D75D6D00314966 /* BeaconCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCommand.swift; sourceTree = "<group>"; };
+		87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBluetoothImplementation.swift; sourceTree = "<group>"; };
+		87266E3C25D7773F00314966 /* HostInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInterface.swift; sourceTree = "<group>"; };
+		87266E4025D777CD00314966 /* BluetoothImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothImplementation.swift; sourceTree = "<group>"; };
+		87B249C125D1E29100746DA2 /* BroadcastArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastArguments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87266E3125D76D5000314966 /* BluetoothDarwin in Frameworks */,
+				87266E3525D76D5000314966 /* ColorizeSwift in Frameworks */,
+				87266E2F25D76D5000314966 /* Bluetooth in Frameworks */,
+				87266E3325D76D5000314966 /* CLIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 				870684F625CFD212003E9965 /* jbeacon */,
 				87266E1825D5E03100314966 /* IBeaconTest */,
 				870684F525CFD212003E9965 /* Products */,
+				87266E2D25D76D5000314966 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				870684F725CFD212003E9965 /* main.swift */,
-				87B249C125D1E29100746DA2 /* BeaconCommand.swift */,
+				87B249C125D1E29100746DA2 /* BroadcastArguments.swift */,
+				87266E2725D75D6D00314966 /* BeaconCommand.swift */,
+				87266E3C25D7773F00314966 /* HostInterface.swift */,
+				87266E4025D777CD00314966 /* BluetoothImplementation.swift */,
 			);
 			path = jbeacon;
 			sourceTree = "<group>";
@@ -91,8 +114,16 @@
 			children = (
 				87266E1925D5E03100314966 /* IBeaconTest.swift */,
 				87266E1B25D5E03100314966 /* Info.plist */,
+				87266E3825D76EAA00314966 /* MockBluetoothImplementation.swift */,
 			);
 			path = IBeaconTest;
+			sourceTree = "<group>";
+		};
+		87266E2D25D76D5000314966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +165,12 @@
 			dependencies = (
 			);
 			name = IBeaconTest;
+			packageProductDependencies = (
+				87266E2E25D76D5000314966 /* Bluetooth */,
+				87266E3025D76D5000314966 /* BluetoothDarwin */,
+				87266E3225D76D5000314966 /* CLIKit */,
+				87266E3425D76D5000314966 /* ColorizeSwift */,
+			);
 			productName = IBeaconTest;
 			productReference = 87266E1725D5E03100314966 /* IBeaconTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -195,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87266E4125D777CD00314966 /* BluetoothImplementation.swift in Sources */,
 				870684F825CFD212003E9965 /* main.swift in Sources */,
-				87B249C225D1E29100746DA2 /* BeaconCommand.swift in Sources */,
+				87266E3D25D7773F00314966 /* HostInterface.swift in Sources */,
+				87B249C225D1E29100746DA2 /* BroadcastArguments.swift in Sources */,
+				87266E2825D75D6D00314966 /* BeaconCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87266E4625D77B2300314966 /* BroadcastArguments.swift in Sources */,
+				87266E4725D77B2300314966 /* BeaconCommand.swift in Sources */,
+				87266E4825D77B2300314966 /* HostInterface.swift in Sources */,
 				87266E1A25D5E03100314966 /* IBeaconTest.swift in Sources */,
+				87266E3925D76EAA00314966 /* MockBluetoothImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +505,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
 			productName = BluetoothDarwin;
+		};
+		87266E2E25D76D5000314966 /* Bluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870684FF25CFE9E7003E9965 /* XCRemoteSwiftPackageReference "Bluetooth" */;
+			productName = Bluetooth;
+		};
+		87266E3025D76D5000314966 /* BluetoothDarwin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8706850325CFEA1C003E9965 /* XCRemoteSwiftPackageReference "BluetoothDarwin" */;
+			productName = BluetoothDarwin;
+		};
+		87266E3225D76D5000314966 /* CLIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DEC25D138AA0019F1F3 /* XCRemoteSwiftPackageReference "CLIKit" */;
+			productName = CLIKit;
+		};
+		87266E3425D76D5000314966 /* ColorizeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A32DF025D146C40019F1F3 /* XCRemoteSwiftPackageReference "ColorizeSwift" */;
+			productName = ColorizeSwift;
 		};
 		87A32DED25D138AA0019F1F3 /* CLIKit */ = {
 			isa = XCSwiftPackageProductDependency;

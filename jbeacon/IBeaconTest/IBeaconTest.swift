@@ -6,27 +6,119 @@
 //
 
 import XCTest
-
+@testable import jbeacon
+@testable import CLIKit
 class IBeaconTest: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testValidUUID() throws {
+        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-uuid",
+            "045af837-e309-4e62-8206-41c41ebeac02",
+        ]
+        let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+        let command = parsedCommand
+        try command.run()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    func testInValidUUID() throws {
+        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-uuid",
+            "045af837-e309-4e62-8206-41c41ebeac",
+        ]
+        func testInValidUUIDThrow() throws {
+            let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+            let command = parsedCommand
+            try command.run()
         }
+        XCTAssertThrowsError(try testInValidUUIDThrow())
     }
-
+    
+    func testValidManufacturer() throws {
+        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-manufacturer",
+            "65535",
+        ]
+        let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+        let command = parsedCommand
+        try command.run()
+    }
+    
+    func testInvalid16ByteData() throws {
+        func testInValidDataThrow(data: Int) throws {
+            let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+            let parser = CommandLineParser()
+            let arguments: [String] = [
+                "jbeacon",
+                "-manufacturer",
+                "\(data)",
+                "-major",
+                "\(data)",
+                "-minor",
+                "\(data)"
+            ]
+            let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+            let command = parsedCommand
+            try command.run()
+        }
+        
+        XCTAssertThrowsError(try testInValidDataThrow(data: -1))
+        XCTAssertThrowsError(try testInValidDataThrow(data: 65536))
+    }
+    
+    
+    func testValidMajorAndMinor() throws {
+        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-major",
+            "65535",
+            "-minor",
+            "0",
+        ]
+        let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+        let command = parsedCommand
+        try command.run()
+    }
+    
+    func testMeasuredPower() throws {
+        let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+        let parser = CommandLineParser()
+        let arguments: [String] = [
+            "jbeacon",
+            "-measuredPower",
+            "255"
+        ]
+        let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+        let command = parsedCommand
+        try command.run()
+    }
+    
+    func testInvalidMeasuredPower() throws {
+        func testInValidDataThrow(data: Int) throws {
+            let beacon = BroadcastArguments(controller: MockBluetoothImplementation())
+            let parser = CommandLineParser()
+            let arguments: [String] = [
+                "jbeacon",
+                "-measuredPower",
+                "\(data)"
+            ]
+            let parsedCommand = try parser.parseArguments(arguments, command: beacon, expectedRootCommand: "jbeacon")
+            let command = parsedCommand
+            try command.run()
+        }
+        
+        XCTAssertThrowsError(try testInValidDataThrow(data: -1))
+        XCTAssertThrowsError(try testInValidDataThrow(data: 256))
+    }
+    
 }
