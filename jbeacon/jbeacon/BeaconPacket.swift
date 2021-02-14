@@ -24,11 +24,11 @@ class BeaconPacket {
         let postfix: UInt8 = 0x00
         let payload: LowEnergyAdvertisingData.ByteValue = (UInt8(0x02), UInt8(0x01), UInt8(0x1a), UInt8(0x1a), UInt8(0xff), UInt8(manufacturerBytes[1]) , UInt8(manufacturerBytes[0]), UInt8(0x02), UInt8(0x15), uuidCommand.0,uuidCommand.1,uuidCommand.2,uuidCommand.3,uuidCommand.4,uuidCommand.5,uuidCommand.6,uuidCommand.7,uuidCommand.8,uuidCommand.9,uuidCommand.10,uuidCommand.11,uuidCommand.12,uuidCommand.13,uuidCommand.14,uuidCommand.15, UInt8(majorBytes[0]), UInt8(majorBytes[1]), UInt8(minorBytes[0]), UInt8(minorBytes[1]), txCommand, postfix)
         try controller.turnOffAdvertising()
-        log(verbose: verbose, text:"Advertising OFF".yellow())
+        log(verbose: verbose, text:"Advertisement OFF".yellow())
         try controller.setAdvertisingParameters()
         log(verbose: verbose, text:"Advertisement parameters set".yellow())
         try controller.turnOnAdvertising()
-        log(verbose: verbose, text:"Advertising ON".yellow())
+        log(verbose: verbose, text:"Advertisement ON".yellow())
         try controller.setAdvertisingData(payload: payload)
         log(verbose: verbose, text:"Advertisement data set".yellow())
         log(verbose: true, text: "Using uuid:\(uuid) manufacturer:\(manufacturer) major:\(major) minor:\(minor) tx:\(measuredPower)".bold().blue())
